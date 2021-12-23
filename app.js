@@ -1,10 +1,12 @@
 const express = require("express")
 const app = express
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send("Test")
 })
 
-app.listen(5009, () => {
+
+const port = process.env.port || 3000
+app.listen(port, () => {
     console.log("App run on port 3002")
 })
